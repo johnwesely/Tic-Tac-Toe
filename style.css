@@ -48,7 +48,7 @@ table {
 }
 
 :root {
-    --pale-spring: #EAEFBD;
+    --pale-spring: #ebecdc;
     --tea-green: #c9e3ac;
     --melon: #EFB0A1;
     --grey: #7c8483;
@@ -65,6 +65,7 @@ body {
 
 .body-container {
     width: 80vw;
+    padding: 8px;
 }
 
 .header {
@@ -140,11 +141,72 @@ body {
 }
 
 .reset button {
-    background-color: var(--melon);
+    background-color: var(--pale-spring);
     color: var(--resin);
     font-size: 2.25rem;
     font-weight: bold;
     padding: 8px 32px;
+    border: 2px solid var(--resin);
+    border-radius: 10px;
+}
+
+.start-form-background {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .4);
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.start-form-container {
+    background-color: var(--grey);
+    padding: 32px;
+    border-radius: 10px;
+    border: 2px solid var(--resin);
+}
+
+#start-form {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-row p {
+    font-size: 2rem;
+}
+
+.form-row input[type="text"],
+.form-row input[type="number"] {
+    border-radius: 5px;
+    border-style: none;
+    border: 2px solid var(--resin);
+    font-size: 2rem;
+    padding: 2px 16px;
+    background-color: var(--pale-spring);
+}
+
+.form-row:last-child {
+    margin-top: auto;
+    padding: 40px 80px 0 80px;
+}
+
+#start-form input[type="button"] {
+    font-size: 2.25rem;
+    font-weight: bold;
+    background-color: var(--pale-spring);
+    border-style: none;
     border: 2px solid var(--resin);
     border-radius: 10px;
 }

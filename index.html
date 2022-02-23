@@ -10,38 +10,60 @@
 </head>
 <body>
     <div class="body-container">
-   <div class="header">
-       <p>Tic Tac Toe</p>
-       <p>Hit Start To Get it Poppin</p>
-   </div>
-   <div class="scoreboard">
+        <div class="header">
+            <p>Tic Tac Toe</p>
+            <p>Hit Start To Get it Poppin</p>
+        </div>
+        <div class="scoreboard">
         <div class="player-1">
-            <p>Player 1:</p>
-            <p>0</p>
+            <p id="red-name">Red Player :</p>
+            <p id="red-score">0</p>
         </div>
         <div class="player-2">
-            <p>Player 2:</p>
-            <p>0</p>
+            <p id="blue-name">Blue Player :</p>
+            <p id="blue-score">0</p>
         </div>
-    </div>
-   <div class="gameboard-container">
-        <div class="board-background">
-            <div class="board">
-                <div class="square"></div>
-                <div class="square"></div>
-                <div class="square"></div>
-                <div class="square"></div>
-                <div class="square"></div>
-                <div class="square"></div>
-                <div class="square"></div>
-                <div class="square"></div>
-                <div class="square"></div>
+        </div>
+        <div class="gameboard-container">
+            <div class="board-background">
+                <div class="board">
+                    <div class="square" id="square-0"></div>
+                    <div class="square" id="square-1"></div>
+                    <div class="square" id="square-2"></div>
+                    <div class="square" id="square-3"></div>
+                    <div class="square" id="square-4"></div>
+                    <div class="square" id="square-5"></div>
+                    <div class="square" id="square-6"></div>
+                    <div class="square" id="square-7"></div>
+                    <div class="square" id="square-8"></div>
+                </div>
             </div>
         </div>
-   </div>
-   <div class="reset">
-       <button id="reset">Start!</button>
-   </div> 
-   </div>
+        <div class="reset">
+            <button id="reset">Start!</button>
+        </div> 
+    </div>
+    <div class="start-form-background">
+        <div class="start-form-container">
+            <form action="" id="start-form" name="start-form" method="GET">
+                <div class="form-row">
+                    <p>Red Player Name</p>
+                    <input type="text" name="redPlayer">
+                </div>
+                <div class="form-row">
+                    <p>Blue Player Name</p>
+                    <input type="text" name="bluePlayer">
+                </div>
+                <div class="form-row">
+                    <p>Number of Points to Win</p>
+                    <input type="number" name="pointsToWin">
+                </div>
+                <div class="form-row">
+                    <input type="button" name="submit-button" value="Click" onClick="Game.startGame(this.form)">
+                </div>
+            </form>
+        </div>
+    </div>
+
 </body>
 </html>

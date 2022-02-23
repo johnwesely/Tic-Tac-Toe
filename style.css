@@ -1,0 +1,150 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+:root {
+    --pale-spring: #EAEFBD;
+    --tea-green: #c9e3ac;
+    --melon: #EFB0A1;
+    --grey: #7c8483;
+    --resin: #2e282a;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    background-color: var(--resin);
+    color: var(--resin);
+    display: flex;
+    justify-content: center;
+}
+
+.body-container {
+    width: 80vw;
+}
+
+.header {
+    background-color: var(--tea-green);
+    padding: 16px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.header p:first-child {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.scoreboard {
+    background-color: var(--grey);
+    padding: 16px;
+
+    display: flex;
+    justify-content: space-around;
+}
+
+.scoreboard div {
+    display: flex;
+    gap: 16px;
+}
+
+.scoreboard div p {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.gameboard-container {
+    background-color: var(--melon);
+    padding: 32px;
+    display: flex;
+    align-items: center;
+
+}
+
+.board-background {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.board {
+    background-color: var(--resin);
+    border-top: 10px solid var(--resin);
+    border-left: 10px solid var(--resin);
+    height: 600px;
+    width: 600px;
+
+    display: grid;
+    grid-template-rows: repeat(3, 190px);
+    grid-template-columns: repeat(3, 190px);
+    gap: 10px;
+
+}
+
+.square {
+    background-color: var(--pale-spring);
+}
+
+.reset {
+    background-color: var(--tea-green);
+    padding: 16px;
+    
+    display: flex;
+    justify-content: center;
+}
+
+.reset button {
+    background-color: var(--melon);
+    color: var(--resin);
+    font-size: 2.25rem;
+    font-weight: bold;
+    padding: 8px 32px;
+    border: 2px solid var(--resin);
+    border-radius: 10px;
+}

@@ -111,13 +111,13 @@ const Game = (() => {
 
     const checkGameWin = () => {
         if (redPlayer.getScore() >= totalScoreToWin) {
-            alert(`${redPlayer.getName()} is the Winner!`);
+            document.querySelector("#winner").textContent = `${redPlayer.getName()} Wins the Game!`;
             squareButtons = [];
             return true;
         }
 
         if (bluePlayer.getScore() >= totalScoreToWin) {
-            alert(`${bluePlayer.getName()} is the Winner!`);
+            document.querySelector("#winner").textContent = `${bluePlayer.getName()} Wins the Game!`;
             squareButtons = [];
             return true;
         }

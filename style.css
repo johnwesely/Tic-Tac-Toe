@@ -210,3 +210,24 @@ body {
     border: 2px solid var(--resin);
     border-radius: 10px;
 }
+
+.round-winner {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.winner-message-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.round-winner button {
+    margin-right: 64px;
+    margin-left: 64px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: var(--pale-spring);
+    border: 2px solid var(--resin);
+    border-radius: 5px;
+}

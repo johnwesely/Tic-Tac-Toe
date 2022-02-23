@@ -150,7 +150,7 @@ body {
     border-radius: 10px;
 }
 
-.start-form-background {
+.start-form-background, .round-winner {
     position: fixed;
     height: 100%;
     width: 100%;

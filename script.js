@@ -3,7 +3,8 @@ const playerFactory = (name, color) => {
 
     const winRound = () => {
         ++score;
-        alert(`${name} wins the Round!`)
+        document.querySelector("#winner").textContent = `${name} Wins the Round!`;
+        DisplayHandler.displayRoundWinner();
     }
 
     const getScore = () => {
@@ -81,7 +82,9 @@ const Game = (() => {
         redPlayer = playerFactory(form.redPlayer.value, "red");
         bluePlayer = playerFactory(form.bluePlayer.value, "blue");
         totalScoreToWin = form.pointsToWin.value;
+        GameBoard.resetBoard();
         DisplayHandler.renderScoreboard(redPlayer, bluePlayer);
+        DisplayHandler.renderBoard();
         DisplayHandler.hideStartForm();
         currentPlayer = redPlayer;
         InitButtons();
@@ -132,8 +135,6 @@ const Game = (() => {
         }
 
         DisplayHandler.renderScoreboard(redPlayer, bluePlayer);
-        GameBoard.resetBoard();
-        DisplayHandler.renderBoard();
     }
 
 
@@ -162,17 +163,28 @@ const DisplayHandler = (() => {
         document.querySelector("#blue-name").textContent = bluePlayer.getName() + " : ";
         document.querySelector("#red-score").textContent = redPlayer.getScore();
         document.querySelector("#blue-score").textContent = bluePlayer.getScore();
-    }
+    };
 
     const displayStartForm = () => {
         document.querySelector(".start-form-background").style.display = "flex";
-    }
+    };
 
     const hideStartForm = () => {
         document.querySelector(".start-form-background").style.display = "none";
+    };
+
+    const hideWinner = () => {
+        document.querySelector(".round-winner").style.display = "none";
+        GameBoard.resetBoard();
+        renderBoard();
     }
+
+    const displayRoundWinner = () => {
+        document.querySelector(".round-winner").style.display = "flex";
+
+    };
     
-    return {renderBoard, displayStartForm, hideStartForm, renderScoreboard};
+    return {renderBoard, displayStartForm, hideStartForm, renderScoreboard, hideWinner, displayRoundWinner};
 })();
 
 DisplayHandler.renderBoard();
